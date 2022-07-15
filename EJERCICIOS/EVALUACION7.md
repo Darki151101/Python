@@ -12,6 +12,23 @@ entradas de datos.
 
 ● esMayorDeEdad(): Devuelve un valor lógico indicando si es mayor de edad.
 
+    class Persona:
+
+      def __init__(self, nombre, edad,DNI):
+        self.nombre=input("Introdusca su nombre")
+        self.edad=int(input("Dijite su edad"))
+        self.DNI=int(input("Intrudusca su DNI"))
+
+        def Adulto(self):
+          if self.edad>17:
+            print(self.edad, "Es Adulto")
+          else:
+            print(self.edad, "Es Menor de edad puede ser una dolecente o un niño")
+
+    persona1=Persona()
+    persona1.Adulto()
+     
+   ![image](https://user-images.githubusercontent.com/99523872/179247073-753634d0-a224-4018-a856-a85411061eb2.png)
 
 ## Ejercicio 2 (2 puntos)
 Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular (que es
@@ -30,6 +47,44 @@ introducida es negativa, no se hará nada.
 
 ● retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar
 en números rojos.
+
+    class Cuenta():
+      def __init__(self,titular,cantidad):
+        self.titular = titular
+        self.catidad = cantidad
+
+        def mostrar(slef):
+          print('La infomacion del cliente es: ')
+          print(f'Titular de la cuneta {self.titular}')
+          print(f'Saldo disponible {self,cantidad }')
+
+    class cajAhorro(Cuenta):
+      def __init__(self,cantidad):
+        super.__init__(cantidad):
+
+      def Info(self):
+          print(f'Dispone actualmente {self.cantidad} en su cuenta de ahorro')
+
+    class PlazoFijo(Cuenta):
+        def __init__(self, cantidad, plazo, interes, importe):
+            super().__init__(cantidad) 
+            self.importe = importe                                                                                     
+            self.interes = interes 
+            self.plazo = plazo
+        def importInteres(self):
+            self.importe = self.cantidad * self.interes / 100
+            print(f'El interes genrado por el imprte es de:{self.importe}')
+            print(f'Generado durante: {self.plazo}')
+
+    cliente1= cajAhorro('Carmen' 120000)
+    cliente1.mostrar()
+
+
+
+    cliente1 = PlazoFijo(120000, '5 Año', 6, 120000)
+    cliente1.importInteres()
+    
+![image](https://user-images.githubusercontent.com/99523872/179247433-5e4082df-69bf-4eae-8ca7-cf090ac60208.png)
 
 
 ## Ejercicio 3 (2 puntos)
@@ -53,3 +108,27 @@ falso en caso contrario.
 bonificación de la cuenta.
 
 ● Piensa los métodos heredados de la clase madre que hay que reescribir.
+
+    class CuentaJoven():
+      def __init__(self,titular,cantidad,edad):
+        self.titular=input("Nombre del titular")
+        self.catidad=int(intput("Cantidad a depositar"))
+        self.edad=int(input("Su edad"))
+
+      def mostrar(slef):
+          print('La infomacion del cliente es: ')
+          print(f'Titular de la cuneta {self.titular}')
+          print(f'Cantidad depositada {self.cantidad }')
+          print(f'Edad {self.edad}')
+
+      def Adulto(self):
+        if self.edad>17:
+          print(self.nombre, "Es Adulto")
+        else:
+          print(self.nombre, "Es Menor de edad puede ser una dolecente o un niño")
+
+
+
+    cliente1=CuentaJoven()
+    cliente1.Adulto()
+
