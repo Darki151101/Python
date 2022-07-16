@@ -105,6 +105,34 @@ Se pide por teclado un número y nos imprime los números primos que hay previos
 
 Ejemplo: si ingresamos el 10 nos imprima del 1 a ese 10 cuales números son primos.
 
+    inspeccion=True 
+    while inspeccion:
+
+      Num=int(input("Ingrese un numero: "))
+
+      if Num > 0:
+        print("Lo hiciste bien")
+
+        inspeccion=False
+
+        for i in range(2,Num):
+          aumento=2
+          esprimo=True
+
+          while esprimo and aumento < i:
+
+            if i & aumento == 0:
+              esprimo=False
+            else: 
+              aumento += 1
+          if esprimo:
+            print(i,"Es primo")
+
+
+      else:
+        print("El numero ingresado no es correcto intentelo de nuevo")
+
+
 
 ## Ejercicio 3 (1.5 puntos)
 Una persona adquirió un producto para pagar en 20 meses. El primer mes pagó
@@ -115,3 +143,15 @@ después de los 20 meses.
 Al finalizar los 20 meses pago en total:
 
 primer mes pago 10, segundo mes pago 20, tercer mes pago 30, cuarto mes pago 40, etc.
+
+    Mensualidad = 10
+    Total = 0
+
+    Plaso=int(input("Ingrese el perido de meses"))
+
+    for i in range(Plaso):
+      print("El pago recomendad " + str(i+1) + " es: " + str(Mensualidad))
+      Total += Mensualidad
+      Mensualidad *=2
+
+    print("El pago total es de: " + str(Total))
