@@ -6,6 +6,25 @@ valores sean los cuadrados de las claves.
 
 Ejemplo: si se ingresa el 4 imprima el cuadrado de 1, de 2, de 3 y de 4
 
+    inspeccion=True 
+    while inspeccion:
+      Num1=int(input("Ingrese un numero: " ))
+
+      if Num1 > 0:
+        i=1
+        while i>Num1:
+          creciente=1
+          espositivo=True
+
+          while creciente < i:
+            if i & creciente == 0:
+              espositivo=False
+            else:
+              creciente += 1
+
+      else:
+        print("El numero ingresado no es correcto intentelo de nuevo")
+
 ## Ejercicio 2 (2 puntos)
 Escribe un programa que lea una cadena y devuelva un diccionario con la
 cantidad de apariciones de cada carácter en la cadena.
