@@ -1,4 +1,4 @@
-# #se crea el diccionrio para desgnar las vidas restantes por cada errror
+#se crea el diccionrio para desgnar las vidas restantes por cada errror
 vidas_diccionario_visual = {
         0: """
                 ___________
